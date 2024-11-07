@@ -354,6 +354,9 @@ nav {
 
 
 @media only screen and (max-width: 768px) {
+    .body_title {
+        font-weight: bold;
+    }
     #side-menu {
         transform: translate(-100%, 0);
         width: 400px;
@@ -396,4 +399,15 @@ nav {
         width: 90%;
 
     }
+    li::marker {
+        content: none;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+    .button {
+        font-size: smaller;
+    }
+
 }
