@@ -1,0 +1,348 @@
+:root {
+    --button-background-color-default: rgba(255,255,255,.0605);
+    --button-background-color-hover: rgba(255,255,255,.0837);
+    --button-border-color-default: rgba(255,255,255,0.07);
+    
+
+
+    --fill-color-layer-default: rgba(58, 58, 58, 0.3);
+
+    --fill-color-accent-secondary: rgb(38, 255, 142);
+
+    --fill-color-text-primary: rgba(255,255,255,1);
+    --fill-color-text-secondary: rgba(255,255,255,.786);
+
+    --fill-color-subtile-secondary: rgba(255,255,255,.0605);
+}
+
+
+* {
+    font-family: 'Segoe UI';
+    color: var(--fill-color-text-primary);
+}
+
+
+
+
+img {
+    border-radius: 10px;
+}
+
+
+
+
+.button {
+    background-color: var(--button-background-color-default);
+    border-color: var(--button-border-color-default);
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px 15px;
+    margin: 5px 15px;
+    text-decoration: none;
+    font-weight: n;
+    user-select: none;
+
+    transition: background-color 100ms linear;
+}
+.button:hover {
+    background-color: var(--button-background-color-hover);
+}
+
+
+
+
+.info-box {
+    background-color: rgba(0, 255, 255, 0.0326);
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.info-box b {
+    padding: 10px;
+}
+.info-box::before {
+    background-color: rgb(96, 205, 255);
+    font-family: Segoe Fluent Icons;
+    padding: 3px;
+    content: "";
+    border-radius: 100%;
+    color: rgb(39, 39, 39);
+    font-weight: bold;
+    font-size: smaller;
+}
+
+
+
+
+
+.warning-box {
+    background-color: rgb(67, 53, 25);
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.warning-box b {
+    padding: 10px;
+}
+.warning-box::before {
+    background-color: rgb(252, 225, 0);
+    font-family: Segoe Fluent Icons;
+    padding: 3px;
+    content: "";
+    border-radius: 100%;
+    color: rgb(39, 39, 39);
+    font-weight: bold;
+    font-size: smaller;
+}
+
+
+#debug1 {
+    --display: none;
+}
+
+
+body {
+    background: linear-gradient(
+      217deg,
+      rgba(13, 15, 24, 0.641),
+      rgba(16, 22, 39, 0.715) 70.71%
+    ),
+    linear-gradient(127deg, rgb(11, 18, 49), rgba(11, 24, 53, 0.493) 70.71%),
+    linear-gradient(336deg, rgb(14, 24, 45), rgba(7, 17, 45, 0.558) 70.71%);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    top: 0;
+    display: flex;
+    padding: 5px 10px 0;
+    position: sticky;
+
+    z-index: 2;
+
+
+    background-color: var(--fill-color-layer-default);
+    backdrop-filter: blur(3rem);
+
+    margin: 0 10px 0 0;
+    padding: 5px;
+
+    border-radius: 0 0 10px 0;
+    border-color: rgb(29, 29, 29, 0.5);
+    border-width: 2px;
+    border-style: solid;
+
+    box-shadow: 0px 5px 0px rgb(29, 29, 29, 0.5);
+}
+
+footer {
+    background-color: var(--fill-color-layer-default);
+    backdrop-filter: blur(1rem);
+
+    margin: 0 10px 0 0;
+    padding: 10px;
+
+    border-radius: 0 10px 0 0;
+    border-color: rgb(29, 29, 29, 0.5);
+    border-width: 2px;
+    border-style: solid;
+}
+
+
+
+.body_title {
+    font-weight: normal;
+    font-size: 20px;
+    align-self: center;
+    margin-left: 10px;
+    text-wrap: nowrap;
+}
+
+
+#side-menu {
+    width: 230px;
+
+    background-color: var(--fill-color-layer-default);
+    backdrop-filter: blur(3rem);
+
+    margin: 10px 0;
+    padding: 10px;
+
+    border-radius: 0 10px 10px 0;
+    border-color: rgb(29, 29, 29, 0.5);
+    border-width: 2px;
+    border-style: solid;
+
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s cubic-bezier(0.75,0.2,0.05,1.0);
+    transform: translate(0,0);
+}
+
+
+
+
+#menu-button {
+    display: none;
+
+    font-family: Segoe Fluent Icons;
+    background-color: rgba(0,0,0,0);
+    transition: background-color 100ms linear;
+    padding: 15px;
+
+    text-align: center;
+    align-self: center;
+
+    border-radius: 5px;
+    border: 0;
+
+    user-select: none;
+    cursor: pointer;
+}
+#menu-button:hover {
+    background-color: var(--fill-color-subtile-secondary);
+}
+
+
+
+
+
+
+
+
+
+section {
+    background-color: var(--fill-color-layer-default);
+    backdrop-filter: blur(1rem);
+
+    flex: 1;
+
+    margin: 10px;
+    padding: 10px;
+
+    border-radius: 10px;
+    border-color: rgb(29, 29, 29, 0.5);
+    border-width: 2px;
+    border-style: solid;
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+
+
+
+
+
+
+
+nav {
+    padding: 5px;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    float: left;    
+
+    top: 70px;
+    position: sticky;
+}
+
+
+
+
+
+.navigation-button-selected {
+    display: flex;
+    font-size: 16px;
+    background-color: var(--fill-color-subtile-secondary);
+    padding: 10px 15px;
+    border-radius: 7px;
+    border-style: none;
+    text-decoration: none;
+    margin: 2px;
+    border-bottom-color: rgba(0,0,0,0);
+}
+.navigation-button-selected::before {
+    float: left;
+    content: ".";
+    background-color: var(--fill-color-accent-secondary);
+    width: 5px;
+    height: 100%;
+    transform: translate(-15px, 0);
+    color: #00000000;
+    font-size: 20;
+    border-radius: 10px;
+    border-bottom-color: rgba(0,0,0,0);
+}
+
+
+
+.navigation-button-unselected {
+    font-size: 16px;
+
+    color: var(--fill-color-text-secondary);
+
+    background-color: none;
+    padding: 10px 15px;
+    border-radius: 7px;
+    border-style: none;
+    text-decoration: none;
+
+    margin: 2px;
+
+    border-bottom-color: rgba(0,0,0,0);
+
+    transition: color 100ms linear;
+    transition: background-color 100ms linear;
+}
+
+.navigation-button-unselected:hover {
+    background-color: var(--fill-color-subtile-secondary);
+    color: var(--fill-color-text-primary);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    #side-menu {
+        transform: translate(-100%, 0);
+        width: 400px;
+        
+        position: fixed;
+        --background-color: rgba(58, 58, 58, 1);
+    }
+    #menu-button {
+        display: block;
+    }
+    header {
+        border-radius: 0 0 10px 10px;
+        margin: 0 10px;
+    }
+    footer {
+        border-radius: 10px 10px 0 0;
+        margin: 0 10px;
+    }
+    .navigation-button-unselected, .navigation-button-unselected:hover {
+        font-size: 24px;
+        padding: 20px 25px;
+    }
+    .navigation-button-selected {
+        font-size: 24px;
+        padding: 20px 25px;
+    }
+    .navigation-button-selected::before {
+        transform: translate(-25px, 0);
+        width: 10px;
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Мій вебсайт</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <header id="page-head">
+            <button id="menu-button" onclick="menu_state_toggle()"></button>
+            <h1 class="body_title">Перснональний Сайт Каралаша Данила AC-246</h1>
+        </header>
+
+        <main>
+            <aside id="side-menu">
+                <nav>
+                    <a class="navigation-button-unselected" href="index.html">Головна</a>
+                    <a class="navigation-button-selected">Про мене</a>
+                    <a class="navigation-button-unselected" href="hobby.html">Мої хобі</a>
+                    <a class="navigation-button-unselected" href="prof.html">Мої професійні навички</a>
+                </nav>
+            </aside>
+
+            <section>
+                <aside style="width: 200; float: right;">
+                    <img width="140" src="https://i.pinimg.com/736x/5e/39/6b/5e396bb1b17681759922dd10f8a9d702.jpg"></img>
+                </aside>
+
+                <h2>Про мене</h2>
+                <article>
+                    <p>Невеличкий список що може описати мене</p>
+                    <ol>
+                        <li>Обожнюю грати в ігри</li>
+                        <li>Вчусь писати код</li>
+                        <li>Обожнюю малювати</li>
+                        <li>Трішки почитую щось корисне</li>
+                        <li>Не дуже спортивний</li>
+                        <li>І також ще щось....</li>
+                    </ol>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p class="info-box"><time datetime="2024-11-01T10:35"><b>Время</b>11 жовтня 2024 10:35</time></p>
+            <p class="warning-box" id="debug1"></p>
+        </footer>
+    </body>
+</html>
