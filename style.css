@@ -28,7 +28,7 @@
     font-family: 'Segoe UI Local';
     font-style: italic;
     font-weight: normal;
-    src: url('fonts/Segoe UI Italic.woff') format('truetype');
+    src: url('fonts/Segoe UI Italic.ttf') format('truetype');
 }
 
 
@@ -103,7 +103,7 @@ img {
 }
 .info-box::before {
     background-color: rgb(96, 205, 255);
-    font-family: Segoe Fluent Icons;
+    font-family: "Segoe Fluent Icons Local";
     padding: 3px;
     content: "";
     border-radius: 100%;
@@ -128,7 +128,7 @@ img {
 }
 .warning-box::before {
     background-color: rgb(252, 225, 0);
-    font-family: Segoe Fluent Icons;
+    font-family: "Segoe Fluent Icons Local";
     padding: 3px;
     content: "";
     border-radius: 100%;
