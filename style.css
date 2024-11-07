@@ -385,3 +385,15 @@ nav {
         width: 10px;
     }
 }
+
+
+@media only screen and (max-width: 560px) {
+    .body_title {
+        font-size: 12px;
+    }
+    #side-menu {
+        transform: translate(-100%, 0);
+        width: 90%;
+
+    }
+}
