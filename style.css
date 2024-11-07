@@ -16,8 +16,47 @@
 }
 
 
+@font-face {
+    font-family: 'Segoe UI Local';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI'), url('fonts/Segoe UI.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Local';
+    font-style: italic;
+    font-weight: normal;
+    src: local('Segoe UI Italic'), url('fonts/Segoe UI Italic.woff') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Local';
+    font-style: bold;
+    font-weight: bold;
+    src: local('Segoe UI Bold'), url('fonts/Segoe UI Bold.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Local';
+    font-style: italic;
+    font-weight: bold;
+    src: local('Segoe UI Bold Italic'), url('fonts/Segoe UI Bold Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Segoe Fluent Icons Local';
+    src: local('Segoe Fluent Icons'), url("fonts/Segoe UI Icons.ttf") format('truetype');
+}
+
+
+
+
 * {
-    font-family: 'Segoe UI';
+    font-family: "Segoe UI Local";
     color: var(--fill-color-text-primary);
 }
 
@@ -194,7 +233,7 @@ footer {
 #menu-button {
     display: none;
 
-    font-family: Segoe Fluent Icons;
+    font-family: "Segoe Fluent Icons Local";
     background-color: rgba(0,0,0,0);
     transition: background-color 100ms linear;
     padding: 15px;
