@@ -141,6 +141,9 @@ img {
 #debug1 {
     --display: none;
 }
+#debug-version::after {
+    content: " | css 2";
+}
 
 
 body {
