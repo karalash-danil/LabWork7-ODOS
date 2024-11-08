@@ -209,7 +209,7 @@ footer {
 
 
 #side-menu {
-    width: 230px;
+    width: 260px;
 
     background-color: var(--fill-color-layer-default);
     backdrop-filter: blur(3rem);
@@ -303,60 +303,49 @@ nav {
 
 
 
-
-.navigation-button-selected {
+.navigation-button-selected b, .navigation-button-unselected b {
+    font-family: "Segoe Fluent Icons Local";
+    padding: 3px;
+    margin: 0 10px 0 0;
+}
+.navigation-button-selected, .navigation-button-unselected {
     display: flex;
     font-size: 16px;
-    background-color: var(--fill-color-subtile-secondary);
-    padding: 10px 15px;
-    border-radius: 7px;
-    border-style: none;
-    text-decoration: none;
-    margin: 2px;
-    border-bottom-color: rgba(0,0,0,0);
-}
-.navigation-button-selected::before {
-    float: left;
-    content: ".";
-    background-color: var(--fill-color-accent-secondary);
-    width: 5px;
-    height: 100%;
-    transform: translate(-15px, 0);
-    color: #00000000;
-    font-size: 20;
-    border-radius: 10px;
-    border-bottom-color: rgba(0,0,0,0);
-}
-
-
-
-.navigation-button-unselected {
-    font-size: 16px;
-
-    color: var(--fill-color-text-secondary);
-
     background-color: none;
+    color: var(--fill-color-text-secondary);
     padding: 10px 15px;
     border-radius: 7px;
     border-style: none;
     text-decoration: none;
-
-    margin: 2px;
-
-    border-bottom-color: rgba(0,0,0,0);
+    margin: 3px;
 
     transition: color 100ms linear;
     transition: background-color 100ms linear;
 }
-
-.navigation-button-unselected:hover {
+.navigation-button-selected, .navigation-button-unselected:hover {
     background-color: var(--fill-color-subtile-secondary);
     color: var(--fill-color-text-primary);
 }
 
+.navigation-button-selected::before, .navigation-button-unselected::before {
+    float: left;
+    content: ".";
+    background-color: none;
+    width: 3px;
+    height: 100%;
+    transform: translate(-15px, 0);
+    color: #00000000;
+    border-radius: 10px;
+    border-bottom-color: rgba(0,0,0,0);
+}
+.navigation-button-selected::before {
+    background-color: var(--fill-color-accent-secondary);
+}
 
 
-@media only screen and (max-width: 768px) {
+
+
+@media only screen and (max-width: 960px) {
     .body_title {
         font-weight: bold;
     }
@@ -386,9 +375,17 @@ nav {
         font-size: 24px;
         padding: 20px 25px;
     }
-    .navigation-button-selected::before {
+    .navigation-button-selected::before, .navigation-button-unselected::before {
         transform: translate(-25px, 0);
-        width: 10px;
+        width: 7px;
+    }
+    ul {
+        padding: 0 0 0 30px;
+        margin: 0;
+    }
+    li::marker {
+        content: "   ";
+        font-family: "Segoe Fluent Icons Local";
     }
 }
 
@@ -402,13 +399,8 @@ nav {
         width: 90%;
 
     }
-    li::marker {
-        content: none;
-    }
-    ul {
-        padding: 0;
-        margin: 0;
-    }
+    
+    
     .button {
         font-size: smaller;
     }
