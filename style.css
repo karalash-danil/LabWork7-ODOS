@@ -8,6 +8,8 @@
 
     --color-layer: rgba(58, 58, 58, 0.3);
 
+    --color-border: rgba(0, 0, 0, 0.2);
+
     --color-accent: rgb(38, 255, 142);
 
     --color-text: rgba(255,255,255,1);
@@ -89,7 +91,7 @@ img {
 
 
 .info-box, .warning-box {
-    background-color: rgba(0, 255, 255, 0.0326);
+    background-color: rgba(0, 150, 150, 0.0526);
     padding: 15px;
     margin: 5px;
     border-radius: 5px;
@@ -148,11 +150,13 @@ header {
     padding: 5px;
 
     border-radius: 0 0 10px 0;
-    border-color: rgb(29, 29, 29, 0.5);
+    border-color: var(--color-border);
     border-width: 2px;
     border-style: solid;
+    border-top-style: none;
+    border-left-style: none;
 
-    box-shadow: 0px 5px 0px rgb(29, 29, 29, 0.5);
+    box-shadow: 0px 5px 0px var(--color-border);
 }
 header h1 {
     font-weight: normal;
@@ -196,6 +200,10 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+
+    background-image: url("https://res.cloudinary.com/vestbee/image/upload/c_scale,q_100,w_720/v1694178262/cyber_hero_1_voewzs.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 main {
     display: flex;
@@ -208,16 +216,19 @@ section {
     flex: 1;
 
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
 
     border-radius: 10px;
-    border-color: rgb(29, 29, 29, 0.5);
+    border-color: var(--color-border);
     border-width: 2px;
     border-style: solid;
 }
 
 
 footer {
+    display: flex;
+    flex-direction: column;
+
     background-color: var(--color-layer);
     backdrop-filter: blur(1rem);
 
@@ -225,9 +236,11 @@ footer {
     padding: 10px;
 
     border-radius: 0 10px 0 0;
-    border-color: rgb(29, 29, 29, 0.5);
+    border-color: var(--color-border);
     border-width: 2px;
     border-style: solid;
+    border-bottom-style: none;
+    border-left-style: none;
 }
 
 
@@ -246,9 +259,10 @@ footer {
     padding: 10px;
 
     border-radius: 0 10px 10px 0;
-    border-color: rgb(29, 29, 29, 0.5);
+    border-color: var(--color-border);
     border-width: 2px;
     border-style: solid;
+    border-left-style: none;
 
     z-index: 1;
 
@@ -305,15 +319,54 @@ nav {
     transform: translate(-15px, 0);
     color: #00000000;
     border-radius: 10px;
-    border-bottom-color: rgba(0,0,0,0);
 }
 .navigation-button-selected::before {
     background-color: var(--color-accent);
 }
 
 
-    /*  Screen Adaptation   */
+/* Hobby Cards */
 
+
+.hobby-cards {
+    display: flex;
+    gap: 10px;
+    float: left;
+}
+
+.hobby-cards div {
+    background-color: var(--color-layer);
+    backdrop-filter: blur(1rem);
+
+    width: 150px;
+    padding: 10px;
+
+    border-radius: 10px;
+    border-color: var(--color-border);
+    border-width: 2px;
+    border-style: solid;
+
+    display: flex;
+    flex-direction: column;
+}
+.hobby-cards img { 
+    padding: 10px;
+}
+.hobby-cards span { 
+    text-align: center;
+}
+
+
+    /*  Screen Adaptation   */
+    
+@media only screen and (max-width: 1100px) {
+    .hobby-cards {
+        display: grid;
+
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+}
 
 @media only screen and (max-width: 960px) {
     .body_title {
@@ -330,10 +383,12 @@ nav {
     header {
         border-radius: 0 0 10px 10px;
         margin: 0 10px;
+        border-top-style: none;
     }
     footer {
         border-radius: 10px 10px 0 0;
         margin: 0 10px;
+        border-bottom-style: none;
     }
     .navigation-button-unselected, .navigation-button-unselected:hover, .navigation-button-selected {
         font-size: 24px;
@@ -359,6 +414,10 @@ nav {
     }
     #side-menu {
         width: 90%;
+    }
+    .navigation-button-selected::before, .navigation-button-unselected::before {
+        transform: translate(-23px, 0);
+        width: 7px;
     }
     .navigation-button-unselected, .navigation-button-unselected:hover, .navigation-button-selected {
         font-size: 18px;
