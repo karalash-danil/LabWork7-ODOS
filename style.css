@@ -125,7 +125,7 @@ img {
 
 
 #debug1, #debug-version {
-    display: none;
+    --display: none;
 }
 #debug-version::after {
     content: " | css 2";
@@ -432,5 +432,11 @@ nav {
     }
     .button {
         font-size: smaller;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .hobby-cards div {
+        width: 120px;
     }
 }
