@@ -198,7 +198,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100dvh;
     margin: 0;
 
     background-image: url("https://res.cloudinary.com/vestbee/image/upload/c_scale,q_100,w_720/v1694178262/cyber_hero_1_voewzs.png");
@@ -383,12 +383,13 @@ nav {
     header {
         border-radius: 0 0 10px 10px;
         margin: 0 10px;
-        border-top-style: none;
+        border-left-style: solid;
     }
     footer {
         border-radius: 10px 10px 0 0;
         margin: 0 10px;
         border-bottom-style: none;
+        border-left-style: solid;
     }
     .navigation-button-unselected, .navigation-button-unselected:hover, .navigation-button-selected {
         font-size: 24px;
