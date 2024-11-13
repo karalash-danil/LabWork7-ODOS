@@ -17,6 +17,7 @@
 }
 
 
+
     /*   Fonts   */
 
 
@@ -187,6 +188,8 @@ header h1 {
 }
 
 
+
+
 body {
     background: linear-gradient(
       217deg,
@@ -198,12 +201,15 @@ body {
 
     display: flex;
     flex-direction: column;
-    height: 100dvh;
     margin: 0;
 
     background-image: url("https://res.cloudinary.com/vestbee/image/upload/c_scale,q_100,w_720/v1694178262/cyber_hero_1_voewzs.png");
-    background-size: 100% 100%;
+    
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    height: 100dvh;
 }
 main {
     display: flex;
