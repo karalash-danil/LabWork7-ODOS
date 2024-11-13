@@ -128,7 +128,7 @@ img {
     --display: none;
 }
 #debug-version::after {
-    content: " | css 2";
+    content: " | css 3";
 }
 
 
@@ -380,7 +380,7 @@ nav {
     }
     #side-menu {
         transform: translate(-100%, 0);
-        width: 400px;
+        width: 300px;
         position: fixed;
     }
     #menu-button {
@@ -398,12 +398,12 @@ nav {
         border-left-style: solid;
     }
     .navigation-button-unselected, .navigation-button-unselected:hover, .navigation-button-selected {
-        font-size: 24px;
-        padding: 20px 25px;
+        font-size: 17px;
+        padding: 12px 17px;
     }
     .navigation-button-selected::before, .navigation-button-unselected::before {
-        transform: translate(-25px, 0);
-        width: 7px;
+        transform: translate(-16px, 0);
+        width: 6px;
     }
     ul {
         padding: 0 0 0 30px;
