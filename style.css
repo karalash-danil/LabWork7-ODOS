@@ -17,7 +17,6 @@
 }
 
 
-
     /*   Fonts   */
 
 
@@ -71,20 +70,25 @@ img {
 
 .button {
     background-color: var(--button-background-color);
-    border-color: var(--button-border-color);
     border-radius: 5px;
-    border-width: 2px;
-    border-style: solid;
-    padding: 5px 15px;
-    margin: 5px 15px;
+    border: solid 2px var(--button-border-color);
+    padding: 10px 15px;
+    margin: 5px;
     text-decoration: none;
-    font-weight: n;
+    font-size: larger;
     user-select: none;
 
     transition: background-color 100ms linear;
 }
 .button:hover {
     background-color: var(--button-background-color-hover);
+}
+.button .icon {
+    display: inline-block;
+    font-family: "Segoe Fluent Icons Local";
+    margin: 0 15px 0 0;
+    font-weight: bold;
+    transform: translateY(2px);
 }
 
 
@@ -94,7 +98,7 @@ img {
 .info-box, .warning-box {
     background-color: rgba(0, 150, 150, 0.0526);
     padding: 15px;
-    margin: 5px;
+    margin: 3px;
     border-radius: 5px;
     font-size: 14px;
 }
@@ -125,7 +129,7 @@ img {
 
 
 #debug1, #debug-version {
-    --display: none;
+    display: none;
 }
 #debug-version::after {
     content: " | css 3";
@@ -163,7 +167,7 @@ header h1 {
     font-weight: normal;
     font-size: 20px;
     align-self: center;
-    margin-left: 10px;
+    margin: 10px;
     text-wrap: nowrap;
 }
 #menu-button {
@@ -224,10 +228,8 @@ section {
     margin: 10px;
     padding: 20px;
 
+    border: solid 2px var(--color-border);
     border-radius: 10px;
-    border-color: var(--color-border);
-    border-width: 2px;
-    border-style: solid;
 }
 
 
@@ -242,9 +244,7 @@ footer {
     padding: 10px;
 
     border-radius: 0 10px 0 0;
-    border-color: var(--color-border);
-    border-width: 2px;
-    border-style: solid;
+    border: solid 2px var(--color-border);
     border-bottom-style: none;
     border-left-style: none;
 }
@@ -292,10 +292,12 @@ nav {
     /*  Navigation Buttons    */
 
 
-.navigation-button-selected b, .navigation-button-unselected b {
+.navigation-button-selected .icon, .navigation-button-unselected .icon {
+    display: inline-block;
     font-family: "Segoe Fluent Icons Local";
-    padding: 3px;
-    margin: 0 10px 0 0;
+    margin: 0 15px 0 0;
+    font-weight: bold;
+    transform: translateY(4px);
 }
 .navigation-button-selected, .navigation-button-unselected {
     display: flex;
@@ -338,6 +340,7 @@ nav {
     display: flex;
     gap: 10px;
     float: left;
+    margin-bottom: 10px;
 }
 
 .hobby-cards div {
@@ -347,13 +350,13 @@ nav {
     width: 150px;
     padding: 10px;
 
+    border: solid 2px var(--color-border);
     border-radius: 10px;
-    border-color: var(--color-border);
-    border-width: 2px;
-    border-style: solid;
 
     display: flex;
     flex-direction: column;
+
+    transition: transform 0.05s linear;
 }
 .hobby-cards img { 
     padding: 10px;
@@ -361,10 +364,14 @@ nav {
 .hobby-cards span { 
     text-align: center;
 }
+.hobby-cards div:hover {
+    transform: perspective(400px) rotateX(15deg);
+}
 
 
     /*  Screen Adaptation   */
     
+
 @media only screen and (max-width: 1100px) {
     .hobby-cards {
         display: grid;
@@ -375,7 +382,7 @@ nav {
 }
 
 @media only screen and (max-width: 960px) {
-    .body_title {
+    header h1 {
         font-weight: bold;
     }
     #side-menu {
@@ -416,11 +423,12 @@ nav {
 }
 
 @media only screen and (max-width: 560px) {
-    .body_title {
-        font-size: 12px;
-    }
     #side-menu {
         width: 90%;
+        padding: 5px;
+    }
+    nav {
+        padding: 0px;
     }
     .navigation-button-selected::before, .navigation-button-unselected::before {
         transform: translate(-23px, 0);
@@ -430,13 +438,30 @@ nav {
         font-size: 18px;
         padding: 18px 23px;
     }
-    .button {
-        font-size: smaller;
+    header h1 {
+        margin: 0;
+        margin-left: 5px;
+        font-size: 16px;
+    }
+    header {
+        margin: 5px;
+        margin-top: 0;
+    }
+    section {
+        margin: 5px;
+        padding: 5px;
+    }
+    footer {
+        margin: 5px;
+        padding: 5px;
     }
 }
 
 @media only screen and (max-width: 440px) {
     .hobby-cards div {
         width: 120px;
+    }
+    header h1 {
+        font-size: 14px;
     }
 }

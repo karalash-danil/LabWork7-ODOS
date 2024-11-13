@@ -23,7 +23,7 @@ function displayWindowSize(){
     var h = window.innerHeight;
     
 
-    if (w > 768) {
+    if (w > 960) {
         menu_state(true);
     } else {
         menu_state(false);
