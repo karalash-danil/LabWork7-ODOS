@@ -219,7 +219,7 @@ main {
     display: flex;
     flex: 1;
 }
-section {
+section, article {
     background-color: var(--color-layer);
     backdrop-filter: blur(1rem);
 
