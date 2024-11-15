@@ -191,18 +191,7 @@ header h1 {
     background-color: var(--color-subtile-secondary);
 }
 
-
-
-
 body {
-    background: linear-gradient(
-      217deg,
-      rgba(13, 15, 24, 0.641),
-      rgba(16, 22, 39, 0.715) 70.71%
-    ),
-    linear-gradient(127deg, rgb(11, 18, 49), rgba(11, 24, 53, 0.493) 70.71%),
-    linear-gradient(336deg, rgb(14, 24, 45), rgba(7, 17, 45, 0.558) 70.71%);
-
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -231,7 +220,6 @@ section, article {
     border: solid 2px var(--color-border);
     border-radius: 10px;
 }
-
 
 footer {
     display: flex;
@@ -333,7 +321,7 @@ nav {
 }
 
 
-/* Hobby Cards */
+    /*      Hobby Cards    */
 
 
 .hobby-cards {
